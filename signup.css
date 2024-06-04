@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.con_page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+.page {
+  background-color: #2d2d2d;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.signup_form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.signup_form input[type="text"],
+.signup_form input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #333333;
+  border-radius: 6px;
+  background-color: #333333;
+  color: #ffffff;
+}
+
+.signup_form input[type="text"]:focus,
+.signup_form input[type="password"]:focus {
+  outline: none;
+  border-color: #4d4d4d;
+}
+
+.signup_form .btnn {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.signup_form .btnn:hover {
+  background-color: #0056b3;
+}
+
+.memeber {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.memeber a {
+  color: #28a745;
+  text-decoration: none;
+}
+
+.memeber a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 700px) {
+  .con_page {
+    padding: 0 20px;
+  }
+}

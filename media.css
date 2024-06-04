@@ -1,0 +1,25 @@
+@media (max-width: 1000px) {
+  .con {
+    grid-template-columns: 1fr 1fr;
+  }
+  .cont_color {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+  .box_one {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 600px) {
+  .con {
+    grid-template-columns: 1fr;
+  }
+}
+
+.read-more {
+  display: block;
+  text-align: center;
+  color: #007bff;
+  margin-top: 10px;
+}

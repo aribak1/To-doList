@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Dancing+Script:wght@400..700&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Jacquarda+Bastarda+9&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Oswald:wght@200..700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <nav class="d-flex justify-content-between align-items-center navi">
+      <div>
+        <h1>Todo-list</h1>
+      </div>
+      <div class="d-flex gap-4 align-items-center">
+        <div><a href="login.html">Login</a></div>
+        <div><a href="signup.html">Signup</a></div>
+        <div><a href="contact.html">Contact</a></div>
+      </div>
+    </nav>
+
+    <div style="max-width: 600px" class="todolist_section container">
+      <form action="" class="cont_color d-flex flex-column mt-5 gap-3">
+        <input class="title" type="text" placeholder="Enter your topic" />
+        <textarea
+          placeholder="comment here..."
+          class="p-3 comm"
+          cols="30"
+          rows="10"
+        ></textarea>
+        <select class="category" id="category">
+          <option value="1">Work</option>
+          <option value="2">Personal</option>
+          <option value="3">Shopping</option>
+          <option value="4">Health</option>
+          <option value="5">Study</option>
+        </select>
+        <input type="date" class="due_date" />
+        <label for="is_completed">Completed:</label>
+        <input type="checkbox" class="is_completed" id="is_completed" />
+        <button class="border-0 mt-3 btn" type="submit">Submit</button>
+      </form>
+    </div>
+
+    <div class="con container"></div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="contact.css" />
+  </head>
+  <body>
+    <div class="con">
+      <div class="container_login">
+        <h1>Contact US</h1>
+        <form id="contactForm" class="contact">
+          <input id="fullName" type="text" placeholder="Full Name" required />
+          <input id="email_id" type="email" placeholder="Email ID" required />
+          <textarea id="message" placeholder="Message" required></textarea>
+          <button type="submit" class="btn">Send</button>
+        </form>
+      </div>
+    </div>
+    /////link email js website
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("enter your secret keys");
+      })();
+    </script>
+
+    <script>
+      const btn = document.querySelector(".btn");
+      btn.addEventListener("click", Send); ///send
+      function Send(e) {
+        e.preventDefault(); ///prevent refresh
+
+        var fullName = document.getElementById("fullName").value.trim(); ///exra spce remove
+        var emailId = document.getElementById("email_id").value.trim();
+        var message = document.getElementById("message").value.trim();
+
+        var params = {
+          from_name: fullName,
+          email_id: emailId,
+          message: message,
+        };
+
+        emailjs
+          .send("Enter your template keys", "Enter your service keys", params) ///email js website keys
+          .then(function (res) {
+            //we are getting response here
+            //res mean response if my data is deleivered then the bottom function will run
+            alert("your message has been sent: "); //// sucess 200
+            document.getElementById("fullName").value = ""; //// when the form is sent then the all boxes fullname emailid, message will be empty
+            document.getElementById("email_id").value = "";
+            document.getElementById("message").value = "";
+          })
+          .catch(function (error) {
+            alert("your message has failed to sent: " + error);
+          });
+      }
+    </script>
+  </body>
+</html>
